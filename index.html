@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Floor Plan AI</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Floor Plan AI</h1>
+      <p class="subtitle">Specify the area and the BHK type to generate floor plans</p>
+      <form id="posterForm" class="poster-form">
+        <label for="floor-area" class="hidden">floor area:</label>
+        <input type="text" id="floor-area" placeholder="floor area in sq. feet" required/>
+        
+        <label for="bhk-type" class="hidden">Art Styles:</label>
+        <select id="bhk-type" name="bhk-type" required>
+            <option value="" disabled selected>Choose BHK type</option>
+            <option value="1-bhk">1-BHK</option>
+            <option value="2-bhk">2-BHK</option>
+            <option value="3-bhk">3-BHK</option>
+            <option value="4-bhk">4-BHK</option>
+            <option value="5-bhk">5-BHK</option>
+            <!-- <option value="cyberpunk">Cyberpunk</option>
+            <option value="abstract">Abstract</option>
+            <option value="pop art">Pop Art</option>
+            <option value="minimalism">Minimalism</option>
+            <option value="futurism">Futurism</option>
+            <option value="neoclassicism">Neo-Classicism</option>
+            <option value="romanticism">Romanticism</option> -->
+        </select>
+        <button type="submit" id="generatePlan">Generate Plan</button>
+      </form>
+      <div id="poster-output" class="poster-output"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
